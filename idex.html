@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triangle JS</title>
+    <script src="triangle.js"></script>
 </head>
 
 <body>
@@ -14,26 +15,6 @@
     <button onclick="results()">answer</button>
     <p id="answer"></p>
 </body>
-<script>
-    function results() {
-        var a = 5;
-        var b = 6;
-        var c = 7;
 
-        var s = (a + b + c) / 2;
-
-        console.log(s);
-
-        var A = Math.sqrt(s * (s - a) * (s - b) * (s - c))
-
-        document.getElementById("answer").innerText = A;
-
-
-    }
-
-    /* s =  a+b+c / 2
-
-  herons formula A = sqrt( s(s-a)(s-b)(s-c) ) */
-</script>
 
 </html>
