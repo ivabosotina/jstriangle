@@ -26,6 +26,9 @@ herons formula A = sqrt( s(s-a)(s-b)(s-c) ) */
 var str = "w3resourcebruce";
 function getLetterGameAnswer() {
 
+    str = document.getElementById("inputLetters").value;
+    console.log(str);
+
 
     var b = str[str.length - 1];
     console.log(b)
@@ -33,8 +36,10 @@ function getLetterGameAnswer() {
     var c = str.substring(0, str.length - 1);
     console.log(c)
 
-    str = b + c;
+    document.getElementById("inputLetters").value = b + c;
     document.getElementById("idLetterGameAnswer").innerText = str;
+
+
 
 
 }
