@@ -1,3 +1,5 @@
+/*triangle*/
+
 function results() {
     var a = 5;
     var b = 6;
@@ -17,3 +19,22 @@ function results() {
 /* s =  a+b+c / 2
 
 herons formula A = sqrt( s(s-a)(s-b)(s-c) ) */
+
+
+
+/* LETTER GAME */
+var str = "w3resourcebruce";
+function getLetterGameAnswer() {
+
+
+    var b = str[str.length - 1];
+    console.log(b)
+
+    var c = str.substring(0, str.length - 1);
+    console.log(c)
+
+    str = b + c;
+    document.getElementById("idLetterGameAnswer").innerText = str;
+
+
+}
