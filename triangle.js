@@ -39,7 +39,43 @@ function getLetterGameAnswer() {
     document.getElementById("inputLetters").value = b + c;
     document.getElementById("idLetterGameAnswer").innerText = str;
 
+}
 
 
+
+/* LEAP YEAR */
+
+function getleapyear() {
+    var day = 1;
+    var year = document.getElementById("inputyears").value;
+    console.log(year);
+
+    var dateValue = dateFromDay(year, 1);
+
+    dateValue.isLeapYear();
+
+    var LeapYear = dateValue.isLeapYear();
+    console.log(LeapYear);
+    if (LeapYear) {
+        document.getElementById("idleapyear").innerText = "is leap year";
+
+    } else {
+        document.getElementById("idleapyear").innerText = "is not leap year";
+    }
 
 }
+
+function dateFromDay(year, day) {
+    var date = new Date(year, 0); // initialize a date in `year-01-01`
+    return new Date(date.setDate(day)); // add the number of days
+}
+
+Date.prototype.isLeapYear = function () {
+    var y = this.getFullYear();
+    return !(y % 4) && (y % 100) || !(y % 400);
+};
+
+/*
+var
+if - calendar
+*/
