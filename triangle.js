@@ -75,7 +75,54 @@ Date.prototype.isLeapYear = function () {
     return !(y % 4) && (y % 100) || !(y % 400);
 };
 
-/*
-var
-if - calendar
-*/
+/*Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.*/
+
+function getFirstSunday() {
+
+    var Sunday = [];
+
+    for (let year = 2014; year < 2050; year++) {
+        var dateValue = dateFromDay(year, 1); /*date value je uvek 1.Januar*/
+        /* console.log(dateValue);*/
+
+
+        const day1 = dateValue.getDay();
+        console.log(day1)
+
+        if (day1 == 0) {
+            //display
+            Sunday.push(dateValue);
+
+        }
+
+
+
+
+
+
+        /*array - const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.push("Kiwi"); */
+
+
+        /* const birthday = new Date('August 19, 1975 23:15:30');
+         const day1 = birthday.getDay();
+         // Sunday - Saturday : 0 - 6
+ 
+         console.log(day1);
+         // expected output: 2*/
+
+    }
+    console.log(Sunday);
+
+    document.getElementById("idfirstSundayInJanuary").innerHTML = Sunday.join(" <br> ");
+
+
+
+
+}
+
+
+/* nuber of yers -  2014- 2050
+date 01.01.
+button with loop*/
+
