@@ -95,11 +95,6 @@ function getFirstSunday() {
 
         }
 
-
-
-
-
-
         /*array - const fruits = ["Banana", "Orange", "Apple", "Mango"];
         fruits.push("Kiwi"); */
 
@@ -116,13 +111,46 @@ function getFirstSunday() {
 
     document.getElementById("idfirstSundayInJanuary").innerHTML = Sunday.join(" <br> ");
 
-
-
-
 }
 
 
-/* nuber of yers -  2014- 2050
-date 01.01.
-button with loop*/
+// Write a JavaScript program to calculate days left until next Christmas.
+function getNextChristmas() {
+    var today = new Date();
+    var Christmas = new Date(today.getFullYear(), 11, 25);
+    console.log(Christmas);
+    //var thisYearCristmas = dateFromDay()
 
+    var one_day = 1000 * 60 * 60 * 24;
+
+    if (today < Christmas) {
+        var output = Christmas.getTime() - today.getTime();
+        console.log((output / one_day))
+    } else {
+        var ChristmasNextYear = new Date(today.getFullYear() + 1, 11, 25)
+        var output = ChristmasNextYear.getTime() - today.getTime();
+        console.log((output / one_day))
+
+    }
+    document.getElementById("idNextChristmas").innerHTML = (output / one_day) + " days left to Christmas";
+}
+
+/*10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user). */
+
+function getMultipleResult() {
+    var number1 = document.getElementById("inputnumber1").value;  //collectiinh number value from input
+    var number2 = document.getElementById("inputnumber2").value;
+    console.log(number2, number1);
+    var multiplyResult = number1 * number2;
+
+    document.getElementById("idresult").innerHTML = (multiplyResult);
+}
+
+function getDividedResult() {
+    var number1 = document.getElementById("inputnumber1").value;  //collectiinh number value from input
+    var number2 = document.getElementById("inputnumber2").value;
+    console.log(number2, number1);
+    var divideResult = number1 / number2;
+
+    document.getElementById("idresult").innerHTML = (divideResult);
+}
