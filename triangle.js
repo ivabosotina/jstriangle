@@ -154,3 +154,39 @@ function getDividedResult() {
 
     document.getElementById("idresult").innerHTML = (divideResult);
 }
+
+
+/*Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  Go to the editor
+[ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
+Expected Output :
+60°C is 140 °F
+45°F is 7.222222222222222°C*/
+
+function getResultDegreeC() {
+    var c = document.getElementById("c").value * 9 / 5 + 32;
+    document.getElementById("f").value = Math.round(c);
+
+    document.getElementById("idc").innerHTML = (c);
+}
+
+function getResultDegreeF() {
+    var f = (document.getElementById("f").value - 32) * 5 / 9;
+    document.getElementById("c").value = Math.round(f);
+
+    document.getElementById("idf").innerHTML = (f);
+}
+
+/*Write a JavaScript program to get the website URL (loading page). */
+function getResultsURL() {
+    document.getElementById("demo").innerHTML =
+        "Page hostname is " + window.location.hostname;
+}
+
+
+/*14. Write a JavaScript exercise to get the extension of a filename.  Go to the editor*/
+
+function getFileExtension() {
+    var fileName = document.getElementById("fileExtensionField").value;
+    var fileExtension = fileName.split('.').pop();
+    document.getElementById("extension").innerHTML = fileExtension;
+}
