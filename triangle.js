@@ -190,3 +190,40 @@ function getFileExtension() {
     var fileExtension = fileName.split('.').pop();
     document.getElementById("extension").innerHTML = fileExtension;
 }
+
+/*119. Write a JavaScript program to check whether a given integer has an increasing digits sequence. */
+
+function getIncreasedNumber() {
+
+    //get input value
+    var inputIncreasing = document.getElementById("increasingNumber").value;
+
+    //declare variables
+    var arrIncreasing = Array.from(inputIncreasing);
+    var temp = -1;
+    var resultIncreasing = true;
+
+    //processing
+    /* for (let i = 0; i < arrIncreasing.length; i++) {
+         const letter = arrIncreasing[i];
+         if (letter > temp) {
+             temp = letter;
+         } else {
+             resultIncreasing = false;
+             break;
+         }
+     }*/
+    var i = 0;
+    while (i < arrIncreasing.length && resultIncreasing) {
+        const letter = arrIncreasing[i];
+        if (letter > temp) {
+            temp = letter;
+        } else {
+            resultIncreasing = false;
+        }
+        i++;
+    }
+
+    /*display */
+    document.getElementById("idincreasedNumber").innerHTML = (resultIncreasing);
+}
